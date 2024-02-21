@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #095c5c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 50%; /* Makes the button circular */
+            width: 120px; /* Adjust as needed */
+            height: 120px; /* Adjust as needed */
+            border: none; /* Removes default button border */
+            outline: none; /* Removes default button outline */
+        }
+
+        #adminBtn {
+            background-color: #3498db; /* Admin button color */
+            color: #fff; /* Text color for admin button */
+        }
+
+        #userBtn {
+            background-color: #2ecc71; /* User button color */
+            color: #fff; /* Text color for user button */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Select User Type</h2>
+        <button id="adminBtn">Admin</button>
+        <button id="userBtn">User</button>
+    </div>
+    <script>
+        document.getElementById("adminBtn").addEventListener("click", function() {
+            // Redirect to admin page or perform admin specific actions
+            window.location.href = "page.html"; // Change to the admin page URL
+        });
+        document.getElementById("userBtn").addEventListener("click", function() {
+            // Redirect to user page or perform user specific actions
+            window.location.href = "userlogin.html"; // Change to the user page URL
+        });
+      
+    </script>
+</body>
+</html>

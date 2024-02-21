@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <style>
+        body{
+            background-color: #095c5c;
+        }
+        /* Additional CSS styles */
+    
+        /* Center the form horizontally */
+        .container {
+            background-color: #e0ecec;
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 50px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(13, 217, 231, 0.1); /* Add a subtle shadow */
+        }
+    
+        /* Style the login button */
+        button {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+    
+        /* Change button color on hover */
+        button:hover {
+            background-color: #45a049;
+        }
+    
+        /* Style the forgot password link */
+        .forgot-password {
+            margin-top: 10px;
+            color: blue;
+            text-decoration: none; /* Remove underline */
+            cursor: pointer;
+            display: inline-block;
+        }
+    
+        /* Change forgot password link color on hover */
+        .forgot-password:hover {
+            color: darkblue;
+        }
+    
+        /* Style the signup link */
+        a {
+            color: #007bff; /* Bootstrap blue color */
+            text-decoration: none; /* Remove underline */
+        }
+    
+        /* Change signup link color on hover */
+        a:hover {
+            color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <div class="container">
+        <h2>User Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+            <p class="forgot-password" id="forgotPassword">Forgot Password?</p>
+        </form>
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </div>
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+    
+            // Get form values
+            var Username = document.getElementById("Username").value;
+            var password = document.getElementById("password").value;
+    
+            // Validate credentials (this is just a simple example, you should use secure authentication mechanisms)
+            if (Username === "Username" && password === "password") {
+                // Redirect to user dashboard or any other page after login
+                window.location.href = "userpage.html"; // Change to the dashboard page URL
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        });
+    
+        document.getElementById("forgotPassword").addEventListener("click", function() {
+            // Add logic to handle forgot password feature, such as showing a reset password form
+            window.location.href = "forgetpassword.html";
+        });
+    </script>
+    
+</body>
+</html>

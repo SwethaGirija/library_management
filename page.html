@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add New Book</title>
+<style>
+  body{
+    background-color: #095c5c;
+  }
+  #addBookForm {
+    max-width: 400px;
+    margin: 0 auto; /* Centers the form horizontally */
+    padding: 50px;
+    background-color: #daeaeb;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  button[type="submit"],
+  button[type="button"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type="text"],
+  input[type="date"] {
+    height: 40px;
+  }
+
+  button[type="submit"],
+  button[type="button"] {
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  button[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  button[type="button"] {
+    background-color: #f44336;
+    color: white;
+  }
+
+  button[type="button"]:hover {
+    background-color: #d32f2f;
+  }
+</style>
+</head>
+<body>
+
+<form id="addBookForm" method="post" action="add_book.php">
+  <h2>Add New Book</h2>
+  <input type="text" name="newTitle" id="newTitle" placeholder="Title">
+  <input type="text" name="newAuthor" id="newAuthor" placeholder="Author">
+  <input type="text" name="newSubject" id="newSubject" placeholder="Subject">
+  <input type="date" name="newPublishDate" id="newPublishDate" placeholder="Publish Date">
+  <button type="submit" id="addBookSubmit">Submit</button>
+  
+
+</form>
+
+<script>
+  document.getElementById('deleteBook').addEventListener('click', function() {
+    // Clear only the title input value
+    document.getElementById('newTitle').value = '';
+  });
+</script>
+
+</body>
+</html>
